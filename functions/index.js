@@ -96,7 +96,9 @@ app.post("/api/active_number", (req, res) => {
   );
 });
 
-const port = 80;
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+// const port = 80;
+// app.listen(port, () => {
+//   console.log(`Example app listening on port ${port}`);
+// });
+
+exports.app = functions.https.onRequest(app);
